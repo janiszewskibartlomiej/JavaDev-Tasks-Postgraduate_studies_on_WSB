@@ -3,11 +3,11 @@ package ja.task2;
 public class Car {
     final String producer;
     final String model;
-    String color;
-    Double capacity;
-    String engine;
-    Integer passengers;
-    String type; // like van, suv ...
+    public String color;
+    public Double capacity;
+    public String engine;
+    public Integer passengers;
+    public String type; // like van, suv ...
 
     public Car(String producer, String model) {
         this.producer = producer;
