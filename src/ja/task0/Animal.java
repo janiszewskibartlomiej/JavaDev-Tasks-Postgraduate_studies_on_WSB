@@ -1,4 +1,4 @@
-package javaTask0;
+package ja.task0;
 
 public class Animal {
     public String name;

@@ -1,4 +1,4 @@
-package javaTask1;
+package ja.task1;
 
 public class Animal {
     final String species;
