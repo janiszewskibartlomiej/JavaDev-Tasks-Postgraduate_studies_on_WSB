@@ -8,13 +8,20 @@ public class Car {
     public String engine;
     public Integer passengers;
     public String type; // like van, suv ...
+    public Integer value;
 
     public Car(String producer, String model) {
         this.producer = producer;
         this.model = model;
     }
 
-    public Car(String producer, String model, String color, Double capacity, String engine, Integer passengers, String type) {
+    public Car(String producer, String model, Integer value) {
+        this.producer = producer;
+        this.model = model;
+        this.value = value;
+    }
+
+    public Car(String producer, String model, String color, Double capacity, String engine, Integer passengers, String type, Integer value) {
         this.producer = producer;
         this.model = model;
         this.color = color;
@@ -22,6 +29,7 @@ public class Car {
         this.engine = engine;
         this.passengers = passengers;
         this.type = type;
+        this.value = value;
     }
 
     @Override
@@ -36,4 +44,5 @@ public class Car {
                 ", type='" + type + '\'' +
                 '}';
     }
+
 }
