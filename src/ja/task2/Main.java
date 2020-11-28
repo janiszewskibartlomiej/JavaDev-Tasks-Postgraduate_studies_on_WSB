@@ -21,5 +21,13 @@ public class Main {
         System.out.println(bartek.getCar());
 
         bartek.setCar(voyager);
+
+        System.out.println(bartek.getCar().value);
+
+        bartek.getCar().value -= 2000;
+
+        System.out.println(bartek.getCar().value);
+
+        System.out.println(bartek.getCar());
     }
 }

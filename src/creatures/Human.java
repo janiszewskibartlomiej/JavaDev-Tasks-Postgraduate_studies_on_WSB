@@ -1,6 +1,7 @@
-package ja.task2;
+package creatures;
 
 import ja.task1.Animal;
+import ja.task2.Car;
 
 import java.util.Calendar;
 
@@ -16,6 +17,15 @@ public class Human {
     private Integer salary;
 
 
+    public Human(String firstName, String lastName, Integer age, Double weight, Integer height, String skinColor) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.weight = weight;
+        this.height = height;
+        this.skinColor = skinColor;
+    }
+
     public Car getCar() {
         return this.car;
     }
@@ -30,15 +40,6 @@ public class Human {
         } else {
             System.out.println("Zaisz się na studia i znajdz nową pracę ");
         }
-    }
-
-    public Human(String firstName, String lastName, Integer age, Double weight, Integer height, String skinColor) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
-        this.weight = weight;
-        this.height = height;
-        this.skinColor = skinColor;
     }
 
     @Override
