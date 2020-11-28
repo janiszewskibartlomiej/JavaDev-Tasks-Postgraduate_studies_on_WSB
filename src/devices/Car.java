@@ -40,7 +40,7 @@ public class Car extends Device implements Saleable {
 
     @Override
     public void turnOn() {
-
+        System.out.println("Uruchomiłem silnik samochodu");
     }
 
     @Override
