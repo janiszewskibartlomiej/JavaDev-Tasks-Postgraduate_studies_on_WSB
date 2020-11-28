@@ -1,6 +1,8 @@
 package creatures;
 
-public class Animal {
+import devices.Saleable;
+
+public class Animal implements Saleable {
     final String species;
     public String name;
     protected Integer age;
@@ -45,5 +47,10 @@ public class Animal {
         } else {
             System.out.println(this.name + " Został wyprowadzony na spacer, a jego obecna waga to " + this.weight);
         }
+    }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+
     }
 }

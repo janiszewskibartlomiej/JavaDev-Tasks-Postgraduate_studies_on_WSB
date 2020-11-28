@@ -1,5 +1,6 @@
 package homework.task2;
 
+import devices.Phone;
 import homework.task1.Animal;
 
 import java.util.Calendar;
@@ -14,6 +15,8 @@ public class Human {
     protected Double weight;
     private Car car;
     private Integer salary;
+    public Double cash;
+    public Phone phone;
 
 
     public Car getCar() {

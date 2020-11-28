@@ -1,5 +1,6 @@
 package creatures;
 
+import devices.Phone;
 import homework.task1.Animal;
 import homework.task2.Car;
 
@@ -15,6 +16,8 @@ public class Human {
     protected Double weight;
     private Car car;
     private Integer salary;
+    public Phone phone;
+    private Double cash;
 
 
     public Human(String firstName, String lastName, Integer age, Double weight, Integer height, String skinColor) {
@@ -24,6 +27,8 @@ public class Human {
         this.weight = weight;
         this.height = height;
         this.skinColor = skinColor;
+        this.cash = 0.0;
+        this.salary = 0;
     }
 
     public Car getCar() {
@@ -72,5 +77,17 @@ public class Human {
             System.out.println("\nPodałeś wartośc ujemną :(");
         }
         this.salary = salary;
+    }
+
+    public Double getCash() {
+        return cash;
+    }
+
+    public void setCash(Double cash) {
+        if (cash != null) {
+            this.cash = cash;
+        } else {
+            System.out.println("Nie mozesz przypisac ujemnej wartosci");
+        }
     }
 }

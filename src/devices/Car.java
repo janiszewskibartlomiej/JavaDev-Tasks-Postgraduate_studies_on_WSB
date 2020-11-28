@@ -1,5 +1,7 @@
 package devices;
 
+import creatures.Human;
+
 public class Car extends Device implements Saleable {
 
     public String color;
@@ -43,13 +45,26 @@ public class Car extends Device implements Saleable {
         System.out.println("Uruchomiłem silnik samochodu");
     }
 
-    @Override
-    public void sell() {
-
-    }
 
     @Override
-    public void sellOnCredit() {
+    public void sell(Human seller, Human buyer, Double price) throws Exception {
+        if (seller.getCash() == null || buyer.getCash() == null) {
+            throw new Exception("Musisz zdefinowac stan portfela");
+        }
+
+        if (seller.getCar() == null) {
+            System.out.println("Sorry nie mas samochodu");
+            throw new Exception("Brak samochodu");
+        }
+        if (buyer.getCash() < price) {
+            System.out.println("Sory nie masz kasy");
+            throw new Exception("Brak kasy");
+        }
+        buyer.setCash(buyer.getCash() - price);
+        seller.setCash(seller.getCash() + price);
+        buyer.setCar(seller.getCar());
+        seller.setCar(null);
+        System.out.println("Samochód  sprzedano za " + price + " od " + seller.firstName + " do " + buyer.firstName);
 
     }
 }

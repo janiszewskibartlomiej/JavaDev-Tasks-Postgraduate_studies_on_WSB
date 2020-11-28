@@ -1,6 +1,8 @@
 package devices;
 
-public class Phone extends Device {
+import creatures.Human;
+
+public class Phone extends Device implements Saleable {
     public final Double screenSize;
     public String color;
     protected Long producerNumber;
@@ -27,5 +29,26 @@ public class Phone extends Device {
     @Override
     public void turnOn() {
         System.out.println("Telefin został włączony");
+    }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) throws Exception {
+        if (seller.getCash() == null || buyer.getCash() == null) {
+            throw new Exception("Musisz zdefinowac stan portfela");
+        }
+
+        if (seller.phone == null) {
+            System.out.println("Sorry nie mas ztelefonu");
+            throw new Exception("Brak teelfonu");
+        }
+        if (buyer.getCash() < price) {
+            System.out.println("Sory nie masz kasy");
+            throw new Exception("Brak kasy");
+        }
+        buyer.setCash(buyer.getCash() - price);
+        seller.setCash(seller.getCash() + price);
+        buyer.phone = seller.phone;
+        seller.phone = null;
+        System.out.println("Telefon sprzedano za " + price + " od " + seller.firstName + " do " + buyer.firstName);
     }
 }
