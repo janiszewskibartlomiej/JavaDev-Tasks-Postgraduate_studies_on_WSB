@@ -1,4 +1,4 @@
-package ja.task1;
+package homework.task1;
 
 public class Animal {
     final String species;

@@ -1,18 +1,26 @@
 package devices;
 
 public class Phone extends Device {
-    public String producer;
-    public String model;
-    public Double screenSize;
+    public final Double screenSize;
     public String color;
     protected Long producerNumber;
 
-    public Phone(String producer, String model, Double screenSize, Long producerNumber, String color, Integer yearOfProduction) {
+    public Phone(String producer, String model, Integer yearOfProduction, Double screenSize, Long producerNumber, String color) {
         super(producer, model, yearOfProduction);
-        this.producer = producer;
-        this.model = model;
         this.screenSize = screenSize;
         this.producerNumber = producerNumber;
         this.color = color;
+    }
+
+    @Override
+    public String toString() {
+        return "Phone{" +
+                "screenSize=" + screenSize +
+                ", color='" + color + '\'' +
+                ", producerNumber=" + producerNumber +
+                ", producer='" + producer + '\'' +
+                ", model='" + model + '\'' +
+                ", yearOfProduction=" + yearOfProduction +
+                '}';
     }
 }

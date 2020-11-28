@@ -1,18 +1,23 @@
+import creatures.Human;
 import devices.Device;
-import ja.task0.Animal;
-import ja.task0.Human;
-import ja.task0.Phone;
+import devices.Phone;
 
 public class Main {
 
     public static void main(String[] args) {
-        Animal animal = new Animal("Saba", "German Shepherd", 45.8, 7);
 
         Human human = new Human("Bartek", "Janiszewski", 42, 111.1, 176, "white");
 
-        Phone phone = new Phone("Huawei", "e20 lite", 5.9, 6827364873236286428L, "blue");
 
         Device device = new Device("Chrysler", "Voyager", 2008);
+
+        Phone phone = new Phone("teefon",
+                "jakis tam",
+                2000,
+                6.5,
+                423482372893753L,
+                "zielony");
+        System.out.println(phone.toString());
 
         System.out.println(device);
     }

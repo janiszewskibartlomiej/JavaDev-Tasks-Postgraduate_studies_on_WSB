@@ -1,6 +1,6 @@
-package ja.task2;
+package homework.task2;
 
-import ja.task1.Animal;
+import homework.task1.Animal;
 
 import java.util.Calendar;
 

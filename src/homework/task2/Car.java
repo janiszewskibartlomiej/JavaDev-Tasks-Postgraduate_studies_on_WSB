@@ -1,4 +1,4 @@
-package ja.task2;
+package homework.task2;
 
 public class Car {
     final String producer;

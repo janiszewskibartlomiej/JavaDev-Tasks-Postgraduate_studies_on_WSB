@@ -1,8 +1,8 @@
 package global;
 
-import ja.task0.Animal;
-import ja.task0.Human;
-import ja.task0.Phone;
+import homework.task0.Animal;
+import homework.task0.Human;
+import homework.task0.Phone;
 
 public class Main {
 

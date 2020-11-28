@@ -1,4 +1,4 @@
-package ja.task0;
+package homework.task0;
 
 public class Phone {
     public String producer;

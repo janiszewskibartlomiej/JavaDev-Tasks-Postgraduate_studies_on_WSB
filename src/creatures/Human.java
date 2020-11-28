@@ -1,7 +1,7 @@
 package creatures;
 
-import ja.task1.Animal;
-import ja.task2.Car;
+import homework.task1.Animal;
+import homework.task2.Car;
 
 import java.util.Calendar;
 
