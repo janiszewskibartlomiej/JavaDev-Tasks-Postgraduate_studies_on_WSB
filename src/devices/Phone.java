@@ -23,4 +23,9 @@ public class Phone extends Device {
                 ", yearOfProduction=" + yearOfProduction +
                 '}';
     }
+
+    @Override
+    public void turnOn() {
+
+    }
 }

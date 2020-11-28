@@ -1,6 +1,6 @@
 package devices;
 
-public class Car extends Device {
+public class Car extends Device implements Saleable {
 
     public String color;
     public Double capacity;
@@ -38,4 +38,18 @@ public class Car extends Device {
                 '}';
     }
 
+    @Override
+    public void turnOn() {
+
+    }
+
+    @Override
+    public void sell() {
+
+    }
+
+    @Override
+    public void sellOnCredit() {
+
+    }
 }

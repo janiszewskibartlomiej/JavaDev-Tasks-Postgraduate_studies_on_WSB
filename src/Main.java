@@ -1,5 +1,5 @@
 import creatures.Human;
-import devices.Device;
+import devices.Car;
 import devices.Phone;
 
 public class Main {
@@ -9,7 +9,7 @@ public class Main {
         Human human = new Human("Bartek", "Janiszewski", 42, 111.1, 176, "white");
 
 
-        Device device = new Device("Chrysler", "Voyager", 2008);
+//        Device device = new Device("Chrysler", "Voyager", 2008);
 
         Phone phone = new Phone("teefon",
                 "jakis tam",
@@ -19,7 +19,10 @@ public class Main {
                 "zielony");
         System.out.println(phone.toString());
 
-        System.out.println(device);
+        Car car = new Car("Chrysler", "voyager", "white", 4.0, "petrol", 7, "van", 35000, 2008);
+
+
+        System.out.println(car);
     }
 
 
